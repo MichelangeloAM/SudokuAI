@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		07BA42432D4AC6CE00C97977 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BA42252D4AC6CD00C97977 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BA422C2D4AC6CD00C97977;
+			remoteInfo = SudokuAI;
+		};
+		07BA424D2D4AC6CE00C97977 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BA42252D4AC6CD00C97977 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BA422C2D4AC6CD00C97977;
+			remoteInfo = SudokuAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07BA422D2D4AC6CD00C97977 /* SudokuAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BA42422D4AC6CE00C97977 /* SudokuAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BA424C2D4AC6CE00C97977 /* SudokuAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07BA422F2D4AC6CD00C97977 /* SudokuAI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SudokuAI;
+			sourceTree = "<group>";
+		};
+		07BA42452D4AC6CE00C97977 /* SudokuAITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SudokuAITests;
+			sourceTree = "<group>";
+		};
+		07BA424F2D4AC6CE00C97977 /* SudokuAIUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SudokuAIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07BA422A2D4AC6CD00C97977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA423F2D4AC6CE00C97977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA42492D4AC6CE00C97977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07BA42242D4AC6CD00C97977 = {
+			isa = PBXGroup;
+			children = (
+				07BA422F2D4AC6CD00C97977 /* SudokuAI */,
+				07BA42452D4AC6CE00C97977 /* SudokuAITests */,
+				07BA424F2D4AC6CE00C97977 /* SudokuAIUITests */,
+				07BA422E2D4AC6CD00C97977 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07BA422E2D4AC6CD00C97977 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07BA422D2D4AC6CD00C97977 /* SudokuAI.app */,
+				07BA42422D4AC6CE00C97977 /* SudokuAITests.xctest */,
+				07BA424C2D4AC6CE00C97977 /* SudokuAIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07BA422C2D4AC6CD00C97977 /* SudokuAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BA42562D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAI" */;
+			buildPhases = (
+				07BA42292D4AC6CD00C97977 /* Sources */,
+				07BA422A2D4AC6CD00C97977 /* Frameworks */,
+				07BA422B2D4AC6CD00C97977 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07BA422F2D4AC6CD00C97977 /* SudokuAI */,
+			);
+			name = SudokuAI;
+			packageProductDependencies = (
+			);
+			productName = SudokuAI;
+			productReference = 07BA422D2D4AC6CD00C97977 /* SudokuAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07BA42412D4AC6CE00C97977 /* SudokuAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BA42592D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAITests" */;
+			buildPhases = (
+				07BA423E2D4AC6CE00C97977 /* Sources */,
+				07BA423F2D4AC6CE00C97977 /* Frameworks */,
+				07BA42402D4AC6CE00C97977 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BA42442D4AC6CE00C97977 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07BA42452D4AC6CE00C97977 /* SudokuAITests */,
+			);
+			name = SudokuAITests;
+			packageProductDependencies = (
+			);
+			productName = SudokuAITests;
+			productReference = 07BA42422D4AC6CE00C97977 /* SudokuAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07BA424B2D4AC6CE00C97977 /* SudokuAIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BA425C2D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAIUITests" */;
+			buildPhases = (
+				07BA42482D4AC6CE00C97977 /* Sources */,
+				07BA42492D4AC6CE00C97977 /* Frameworks */,
+				07BA424A2D4AC6CE00C97977 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BA424E2D4AC6CE00C97977 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07BA424F2D4AC6CE00C97977 /* SudokuAIUITests */,
+			);
+			name = SudokuAIUITests;
+			packageProductDependencies = (
+			);
+			productName = SudokuAIUITests;
+			productReference = 07BA424C2D4AC6CE00C97977 /* SudokuAIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07BA42252D4AC6CD00C97977 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					07BA422C2D4AC6CD00C97977 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					07BA42412D4AC6CE00C97977 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 07BA422C2D4AC6CD00C97977;
+					};
+					07BA424B2D4AC6CE00C97977 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 07BA422C2D4AC6CD00C97977;
+					};
+				};
+			};
+			buildConfigurationList = 07BA42282D4AC6CD00C97977 /* Build configuration list for PBXProject "SudokuAI" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07BA42242D4AC6CD00C97977;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 07BA422E2D4AC6CD00C97977 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07BA422C2D4AC6CD00C97977 /* SudokuAI */,
+				07BA42412D4AC6CE00C97977 /* SudokuAITests */,
+				07BA424B2D4AC6CE00C97977 /* SudokuAIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07BA422B2D4AC6CD00C97977 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA42402D4AC6CE00C97977 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA424A2D4AC6CE00C97977 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07BA42292D4AC6CD00C97977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA423E2D4AC6CE00C97977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BA42482D4AC6CE00C97977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07BA42442D4AC6CE00C97977 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BA422C2D4AC6CD00C97977 /* SudokuAI */;
+			targetProxy = 07BA42432D4AC6CE00C97977 /* PBXContainerItemProxy */;
+		};
+		07BA424E2D4AC6CE00C97977 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BA422C2D4AC6CD00C97977 /* SudokuAI */;
+			targetProxy = 07BA424D2D4AC6CE00C97977 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07BA42542D4AC6CE00C97977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07BA42552D4AC6CE00C97977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07BA42572D4AC6CE00C97977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SudokuAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 32X849995V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07BA42582D4AC6CE00C97977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SudokuAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 32X849995V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07BA425A2D4AC6CE00C97977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X849995V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudokuAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SudokuAI";
+			};
+			name = Debug;
+		};
+		07BA425B2D4AC6CE00C97977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X849995V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudokuAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SudokuAI";
+			};
+			name = Release;
+		};
+		07BA425D2D4AC6CE00C97977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X849995V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SudokuAI;
+			};
+			name = Debug;
+		};
+		07BA425E2D4AC6CE00C97977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X849995V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelangeloAmorusoManzari.WorkTimer.SudokuAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SudokuAI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07BA42282D4AC6CD00C97977 /* Build configuration list for PBXProject "SudokuAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BA42542D4AC6CE00C97977 /* Debug */,
+				07BA42552D4AC6CE00C97977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BA42562D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BA42572D4AC6CE00C97977 /* Debug */,
+				07BA42582D4AC6CE00C97977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BA42592D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BA425A2D4AC6CE00C97977 /* Debug */,
+				07BA425B2D4AC6CE00C97977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BA425C2D4AC6CE00C97977 /* Build configuration list for PBXNativeTarget "SudokuAIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BA425D2D4AC6CE00C97977 /* Debug */,
+				07BA425E2D4AC6CE00C97977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07BA42252D4AC6CD00C97977 /* Project object */;
+}
