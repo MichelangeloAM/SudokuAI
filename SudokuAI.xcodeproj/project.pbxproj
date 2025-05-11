@@ -33,7 +33,7 @@
 		07BA422F2D4AC6CD00C97977 /* SudokuAI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SudokuAI;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		07BA42452D4AC6CE00C97977 /* SudokuAITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -321,6 +321,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan and solve Sudoku puzzles.\n";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -329,6 +331,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				f = "";
 			};
 			name = Debug;
 		};
@@ -378,6 +381,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan and solve Sudoku puzzles.\n";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -385,6 +390,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				f = "";
 			};
 			name = Release;
 		};

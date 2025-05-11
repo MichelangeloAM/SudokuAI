@@ -2,46 +2,73 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Image("AppLogo")
-                .resizable()
-                .frame(width: 100, height: 100)
-            
-            Text("Sudoku Helper")
-                .font(.system(size: 45, weight: .bold))
-                .foregroundColor(.blue)
-            
-            Image("Bot")
-                .resizable()
-                .frame(width: 100, height: 100)
-            
-            Button(action: {
-                // Verify Sudoku action
-            }) {
-                Text("Verify Sudoku")
-                    .font(.title3)
+        NavigationView {
+            VStack(spacing: 30) {
+                Spacer()
+                
+                // App logo/icon
+                Image(systemName: "number.square")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.blue)
+                
+                // App title
+                Text("Sudoku Solver AI")
+                    .font(.system(size: 36, weight: .bold))
+                    .foregroundColor(.primary)
+                
+                // App description
+                Text("Take a photo of a Sudoku puzzle\nand get the solution instantly")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal)
+                
+                Spacer()
+                
+                // Camera button
+                NavigationLink(destination: CameraViewControllerWrapper()) {
+                    HStack {
+                        Image(systemName: "camera.fill")
+                            .font(.title2)
+                        Text("Scan Sudoku")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
+                    .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
-                    .cornerRadius(30)
+                    .cornerRadius(15)
+                    .shadow(radius: 5)
+                    .padding(.horizontal, 40)
+                }
+                
+                Spacer()
+                
+                // Footer text
+                Text("Powered by Computer Vision & ML")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
             }
-            
-            Button(action: {
-                // Solve Sudoku action
-            }) {
-                Text("Solve Sudoku")
-                    .font(.title3)
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(30)
-            }
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding()
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+// A UIViewControllerRepresentable to wrap your UIKit CameraViewController
+struct CameraViewControllerWrapper: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> CameraViewController {
+        CameraViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {
+        // Nothing special needed here
     }
 }
