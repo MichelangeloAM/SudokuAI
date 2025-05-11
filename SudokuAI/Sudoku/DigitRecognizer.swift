@@ -53,7 +53,8 @@ class DigitRecognizer {
             let digit = Int(topResult.identifier)
             
             // Only accept results with a minimum confidence
-            if topResult.confidence > 0.5, let digitValue = digit {
+            // Lowered threshold to 0.3 to be more permissive
+            if topResult.confidence > 0.3, let digitValue = digit {
                 return digitValue
             } else {
                 print("Low confidence classification: \(topResult.identifier) (\(topResult.confidence))")
@@ -134,7 +135,7 @@ class DigitRecognizer {
         let totalPixels = width * height
         let darkPixelPercentage = Float(darkPixelCount) / Float(totalPixels)
         
-        // If less than 5% of pixels are dark, consider it empty
-        return darkPixelPercentage < 0.05
+        // If less than 3% of pixels are dark, consider it empty (lowered from 5%)
+        return darkPixelPercentage < 0.03
     }
 } 

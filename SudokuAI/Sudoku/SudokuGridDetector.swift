@@ -65,10 +65,29 @@ class SudokuGridDetector {
         // Apply contrast enhancement
         let contrastFilter = CIFilter.colorControls()
         contrastFilter.setValue(grayscaleOutput, forKey: kCIInputImageKey)
-        contrastFilter.setValue(1.5, forKey: kCIInputContrastKey) // Increase contrast
+        contrastFilter.setValue(1.8, forKey: kCIInputContrastKey) // Increased from 1.5 to 1.8
+        contrastFilter.setValue(0.1, forKey: kCIInputBrightnessKey) // Slight brightness adjustment
         
-        guard let contrastOutput = contrastFilter.outputImage,
-              let cgImage = context.createCGImage(contrastOutput, from: contrastOutput.extent) else {
+        guard let contrastOutput = contrastFilter.outputImage else {
+            return inputImage
+        }
+        
+        // Apply noise reduction
+        let noiseReductionFilter = CIFilter.gaussianBlur()
+        noiseReductionFilter.setValue(contrastOutput, forKey: kCIInputImageKey)
+        noiseReductionFilter.setValue(0.5, forKey: kCIInputRadiusKey) // Subtle blur to reduce noise
+        
+        guard let noiseReductionOutput = noiseReductionFilter.outputImage else {
+            return inputImage
+        }
+        
+        // Apply sharpening to enhance edges
+        let sharpenFilter = CIFilter.sharpenLuminance()
+        sharpenFilter.setValue(noiseReductionOutput, forKey: kCIInputImageKey)
+        sharpenFilter.setValue(0.7, forKey: kCIInputSharpnessKey)
+        
+        guard let sharpenOutput = sharpenFilter.outputImage,
+              let cgImage = context.createCGImage(sharpenOutput, from: sharpenOutput.extent) else {
             return inputImage
         }
         
@@ -197,9 +216,18 @@ class SudokuGridDetector {
             return cellImage
         }
         
-        // Step 2: Apply adaptive thresholding
+        // Step 2: Apply contrast enhancement
+        let contrastFilter = CIFilter.colorControls()
+        contrastFilter.setValue(grayscaleOutput, forKey: kCIInputImageKey)
+        contrastFilter.setValue(2.0, forKey: kCIInputContrastKey) // Higher contrast
+        
+        guard let contrastOutput = contrastFilter.outputImage else {
+            return cellImage
+        }
+        
+        // Step 3: Apply adaptive thresholding
         let thresholdFilter = CIFilter.colorThreshold()
-        thresholdFilter.setValue(grayscaleOutput, forKey: kCIInputImageKey)
+        thresholdFilter.setValue(contrastOutput, forKey: kCIInputImageKey)
         thresholdFilter.setValue(0.5, forKey: "inputThreshold")
         
         guard let thresholdOutput = thresholdFilter.outputImage,
@@ -207,10 +235,10 @@ class SudokuGridDetector {
             return cellImage
         }
         
-        // Step 3: Crop to remove border (which can interfere with OCR)
+        // Step 4: Crop to remove border (which can interfere with OCR)
         let width = resultCGImage.width
         let height = resultCGImage.height
-        let cropMargin = Int(min(width, height) * 0.15) // 15% margin
+        let cropMargin = Int(Double(min(width, height)) * 0.2) // 20% margin for a tighter crop
         
         let cropRect = CGRect(
             x: cropMargin,

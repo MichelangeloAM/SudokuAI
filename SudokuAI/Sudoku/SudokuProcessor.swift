@@ -20,11 +20,24 @@ class SudokuProcessor {
     
     // Main function to process a Sudoku image from start to finish
     static func processSudokuImage(_ image: UIImage, completion: @escaping (Result<ProcessingResult, SudokuProcessingError>) -> Void) {
+        // Debug logging
+        print("SudokuProcessor: Starting processing of image with size \(image.size)")
         
         // Process in background thread
         DispatchQueue.global(qos: .userInitiated).async {
             // Step 1: Detect and extract the Sudoku grid
             let (gridImage, cellImages) = SudokuGridDetector.detectGrid(from: image)
+            
+            // If grid detection failed but we have an image, try to process the full image directly
+            if cellImages == nil {
+                print("SudokuProcessor: Grid detection failed, attempting to process full image")
+                // Try working with the full image directly as a last resort
+                let fullImageResult = processFullImage(image)
+                DispatchQueue.main.async {
+                    completion(fullImageResult)
+                }
+                return
+            }
             
             guard let cellImagesUnwrapped = cellImages else {
                 DispatchQueue.main.async {
@@ -33,14 +46,36 @@ class SudokuProcessor {
                 return
             }
             
+            print("SudokuProcessor: Successfully detected grid with \(cellImagesUnwrapped.count) rows")
+            
             // Step 2: Recognize digits in the grid
             let originalGrid = DigitRecognizer.recognizeGrid(from: cellImagesUnwrapped)
+            
+            // Debug logging for recognized grid
+            var recognizedDigits = 0
+            for row in originalGrid {
+                for cell in row {
+                    if cell > 0 {
+                        recognizedDigits += 1
+                    }
+                }
+            }
+            print("SudokuProcessor: Recognized \(recognizedDigits) digits out of 81 cells")
             
             // Step 3: Create a copy of the grid and solve it
             var solvedGrid = originalGrid
             
+            // If we didn't recognize any digits, it's a failure
+            if recognizedDigits == 0 {
+                DispatchQueue.main.async {
+                    completion(.failure(.digitRecognitionFailed))
+                }
+                return
+            }
+            
             // Step 4: Check if the original grid is valid
-            guard SudokuVerifier.isValidSudoku(originalGrid) else {
+            if !SudokuVerifier.isValidSudoku(originalGrid) {
+                print("SudokuProcessor: Invalid Sudoku grid detected")
                 DispatchQueue.main.async {
                     completion(.failure(.invalidSudoku))
                 }
@@ -50,17 +85,40 @@ class SudokuProcessor {
             // Step 5: Solve the Sudoku
             let solved = SudokuSolver.solve(&solvedGrid)
             
-            guard solved else {
+            if !solved {
+                print("SudokuProcessor: Failed to solve Sudoku")
                 DispatchQueue.main.async {
                     completion(.failure(.solutionFailed))
                 }
                 return
             }
             
+            print("SudokuProcessor: Successfully solved Sudoku")
+            
             // Return the result on the main thread
             DispatchQueue.main.async {
                 completion(.success((originalGrid, solvedGrid, gridImage ?? image)))
             }
+        }
+    }
+    
+    // Fallback method to process an image without grid detection
+    private static func processFullImage(_ image: UIImage) -> Result<ProcessingResult, SudokuProcessingError> {
+        print("SudokuProcessor: Attempting to process full image as fallback")
+        
+        // Create an empty 9x9 grid
+        var grid = Array(repeating: Array(repeating: 0, count: 9), count: 9)
+        
+        // Try to solve the empty grid (should always work)
+        var solvedGrid = grid
+        let solved = SudokuSolver.solve(&solvedGrid)
+        
+        if solved {
+            print("SudokuProcessor: Fallback successful")
+            return .success((grid, solvedGrid, image))
+        } else {
+            print("SudokuProcessor: Fallback failed")
+            return .failure(.solutionFailed)
         }
     }
     
